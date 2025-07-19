@@ -27,9 +27,8 @@ Start by launching the DLL Injector application. You'll see a grid of running pr
 
 ➡️ **Click on the hook option for `Notepad.exe`**.
 
-```
+
 ![Step 1: Select Process](images/selectProcess.png)
-```
 
 ---
 
@@ -45,9 +44,9 @@ In this example:
 
 Once configured, click **Hook** to inject the DLL and activate the hook.
 
-```
+
 ![Step 2: Configure Hook](images/hookCreateFileW.png)
-```
+
 
 ---
 
@@ -57,9 +56,9 @@ If the hook was applied successfully, you'll see a confirmation dialog.
 You must press **"Unhook"** when you're done, to safely remove the hook from the target process.  
 > ⚠️ If the hook is not removed, the process may need to be restarted manually.
 
-```
+
 ![Step 3: Hook Success](images/doneHook.png)
-```
+
 
 ---
 
