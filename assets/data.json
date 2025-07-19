@@ -1,0 +1,118 @@
+{
+  "CreateFileW": {
+    "match_path": "C:\\dummy\\",
+    "override": {
+      "lpFileName": "C:\\dummy\\override.txt",
+      "block": false
+    }
+  },
+  "WriteFile": {
+    "match_handle": "any",
+    "override": {
+      "lpBuffer": "Modified by hook",
+      "nNumberOfBytesToWrite": 20,
+      "block": false
+    }
+  },
+  "ReadFile": {
+    "match_handle": "any",
+    "override": {
+      "nNumberOfBytesToRead": 1024,
+      "block": false
+    }
+  },
+  "DeleteFileW": {
+    "match_path": "*",
+    "override": {
+      "block": true
+    }
+  },
+  "MoveFileW": {
+    "match_source": "*",
+    "override": {
+       "lpExistingFileName": "C:\\dummy\\source.txt",
+      "lpNewFileName": "C:\\dummy\\moved.txt",
+      "block": false
+    }
+  },
+  "CopyFileW": {
+    "match_source": "*",
+    "override": {
+      "lpExistingFileName": "C:\\dummy\\source.txt",
+      "lpNewFileName": "C:\\dummy\\copy.txt",
+      "block": false
+    }
+  },
+  "CreateDirectoryW": {
+    "match_path": "*",
+    "override": {
+      "block": true
+    }
+  },
+  "RemoveDirectoryW": {
+    "match_path": "*",
+    "override": {
+      "block": true
+    }
+  },
+  "RegSetValueExW": {
+    "match_key": "*",
+    "override": {
+      "lpData": "Hooked Registry Data",
+      "block": false
+    }
+  },
+  "RegCreateKeyExW": {
+    "match_key": "*",
+    "override": {
+      "block": true
+    }
+  },
+  "OpenProcess": {
+    "match_pid": "any",
+    "override": {
+      "dwDesiredAccess": 0,
+      "block": false
+    }
+  },
+  "VirtualAllocEx": {
+    "match_process": "any",
+    "override": {
+      "dwSize": 4096,
+      "flProtect": "PAGE_NOACCESS",
+      "block": false
+    }
+  },
+  "CreateProcessW": {
+    "match_exe": "*",
+    "override": {
+      "lpCommandLine": "C:\\Windows\\System32\\notepad.exe",
+      "block": false
+    }
+  },
+  "CreateRemoteThread": {
+    "match_target_process": "any",
+    "override": {
+      "block": true
+    }
+  },
+  "GetProcAddress": {
+    "match_module": "any",
+    "override": {
+      "lpProcName": "FakeFunction",
+      "block": false
+    }
+  },
+  "LoadLibraryW": {
+    "match_dll": "*",
+    "override": {
+      "block": true
+    }
+  },
+  "ExitProcess": {
+    "match_code": "any",
+    "override": {
+      "block": true
+    }
+  }
+}

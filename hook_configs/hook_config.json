@@ -1,0 +1,11 @@
+{
+  "WriteFile": {
+    "override": {
+      "lpBuffer": "Modified k",
+      "nNumberOfBytesToWrite": "default",
+      "block": true
+    }
+  },
+  "monitor": "false",
+  "pid": "5804"
+}
